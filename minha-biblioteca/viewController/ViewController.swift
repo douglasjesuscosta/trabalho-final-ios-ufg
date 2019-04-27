@@ -8,6 +8,7 @@
 
 import UIKit
 import FirebaseDatabase
+import SDWebImage
 
 class ViewController: UIViewController, UICollectionViewDataSource {
 
@@ -29,15 +30,25 @@ class ViewController: UIViewController, UICollectionViewDataSource {
                 let bookObject  = Book(snapshot: bookSnapshot as! DataSnapshot)
                 newBooks.append(bookObject)
             }
+            
+            self.books = newBooks
+            self.bookCollectionView.reloadData()
         }
     }
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
-        <#code#>
+        return books.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
-        let cell = bookCollectionView.dequeueReusableCell(withReuseIdentifier: "bookCell", for: <#T##IndexPath#>) as! BookCollectionViewCell
+        let cell = bookCollectionView.dequeueReusableCell(withReuseIdentifier: "bookCell", for: indexPath) as! BookCollectionViewCell
+        
+        let book = books[indexPath.row]
+        
+        cell.imageBook.sd_setImage(with: URL(string: book.imageUrl))
+        cell.titleBook.text = book.name
+        
+        return cell
     }
     
     override func viewDidLoad() {

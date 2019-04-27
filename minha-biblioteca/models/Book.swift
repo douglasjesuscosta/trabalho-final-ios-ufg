@@ -34,21 +34,26 @@ class Book : NSObject, NSCoding {
     }
     
     required init?(coder aDecoder: NSCoder) {
+        self.key = aDecoder.decodeObject(forKey: "key") as! String
         self.name = aDecoder.decodeObject(forKey : "name") as! String
         self.author = aDecoder.decodeObject(forKey: "author") as! String
         self.classification = aDecoder.decodeInteger(forKey: "classification")
         self.bookDescription = aDecoder.decodeObject(forKey: "bookDescription") as! String
         self.value = aDecoder.decodeObject(forKey: "value") as! Float
         self.imageUrl = aDecoder.decodeObject(forKey: "imageUrl") as! String
+        
+        self.itemRef = nil
     }
     
     func encode(with aCoder: NSCoder) {
+        aCoder.encode(key, forKey: "key")
         aCoder.encode(name, forKey: "name")
         aCoder.encode(author, forKey : "author")
         aCoder.encode(classification, forKey : "classification")
         aCoder.encode(bookDescription, forKey: "bookDescription")
         aCoder.encode(value, forKey: "value")
         aCoder.encode(imageUrl, forKey: "imageUrl")
+        aCoder.encode(itemRef, forKey: "itemRef")
     }
     
     init(snapshot: DataSnapshot) {

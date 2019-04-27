@@ -7,5 +7,6 @@ target 'minha-biblioteca' do
 
   # Pods for minha-biblioteca
   pod 'Firebase/Core'
+  pod 'Firebase/Database'
 
 end

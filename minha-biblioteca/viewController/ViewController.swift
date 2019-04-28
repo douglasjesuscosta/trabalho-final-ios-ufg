@@ -60,12 +60,11 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let book = books[indexPath.row]
         
+       
         cell.imageBook.sd_setImage(with: URL(string: book.imageUrl))
         cell.titleBook.text = book.name
         
         return cell
     }
-    
-
 }
 

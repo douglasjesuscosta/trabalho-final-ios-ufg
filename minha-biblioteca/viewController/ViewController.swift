@@ -10,13 +10,27 @@ import UIKit
 import FirebaseDatabase
 import SDWebImage
 
-class ViewController: UIViewController, UICollectionViewDataSource {
+class ViewController: UIViewController, UICollectionViewDataSource, UICollectionViewDelegate {
 
     @IBOutlet weak var bookCollectionView: UICollectionView!
+    
     var customBookCollectionFlowLayout: CustomBookCollectionLayout!
     var books = [Book]()
     
     var dbRef: DatabaseReference!
+    
+    override func viewDidLoad() {
+        super.viewDidLoad()
+        // Do any additional setup after loading the view.
+        
+        // Inicializacao do banco de dados e carregamento de imagens
+        dbRef = Database.database().reference().child("books")
+        
+        //customBookCollectionFlowLayout = CustomBookCollectionLayout()
+        //bookCollectionView.collectionViewLayout = customBookCollectionFlowLayout
+        
+        loadDB()
+    }
     
     func loadBooks() {
         
@@ -29,6 +43,7 @@ class ViewController: UIViewController, UICollectionViewDataSource {
             for bookSnapshot in DataSnapshot.children {
                 let bookObject  = Book(snapshot: bookSnapshot as! DataSnapshot)
                 newBooks.append(bookObject)
+                print(bookSnapshot)
             }
             
             self.books = newBooks
@@ -51,9 +66,6 @@ class ViewController: UIViewController, UICollectionViewDataSource {
         return cell
     }
     
-    override func viewDidLoad() {
-        super.viewDidLoad()
-        // Do any additional setup after loading the view.
-    }
+
 }
 

@@ -14,10 +14,10 @@
 		64052B3922749E7100C89C79 /* minha_biblioteca.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 64052B3722749E7100C89C79 /* minha_biblioteca.xcdatamodeld */; };
 		64052B3B22749E7200C89C79 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 64052B3A22749E7200C89C79 /* Assets.xcassets */; };
 		64052B3E22749E7200C89C79 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 64052B3C22749E7200C89C79 /* LaunchScreen.storyboard */; };
-		64052B462274A0DE00C89C79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64052B452274A0DE00C89C79 /* GoogleService-Info.plist */; };
 		64052B492274A64B00C89C79 /* Book.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64052B482274A64B00C89C79 /* Book.swift */; };
 		64052B4C2274D4DD00C89C79 /* BookCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64052B4B2274D4DD00C89C79 /* BookCollectionViewCell.swift */; };
 		64052B4F2274D84700C89C79 /* CustomBookCollectionLayout.swift in Sources */ = {isa = PBXBuildFile; fileRef = 64052B4E2274D84700C89C79 /* CustomBookCollectionLayout.swift */; };
+		64052B512275569400C89C79 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = 64052B502275569400C89C79 /* GoogleService-Info.plist */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -30,10 +30,10 @@
 		64052B3A22749E7200C89C79 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		64052B3D22749E7200C89C79 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
 		64052B3F22749E7200C89C79 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
-		64052B452274A0DE00C89C79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; name = "GoogleService-Info.plist"; path = "../../../Downloads/GoogleService-Info.plist"; sourceTree = "<group>"; };
 		64052B482274A64B00C89C79 /* Book.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Book.swift; sourceTree = "<group>"; };
 		64052B4B2274D4DD00C89C79 /* BookCollectionViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BookCollectionViewCell.swift; sourceTree = "<group>"; };
 		64052B4E2274D84700C89C79 /* CustomBookCollectionLayout.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CustomBookCollectionLayout.swift; sourceTree = "<group>"; };
+		64052B502275569400C89C79 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		973489EFB17436F362652139 /* Pods-minha-biblioteca.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-minha-biblioteca.debug.xcconfig"; path = "Target Support Files/Pods-minha-biblioteca/Pods-minha-biblioteca.debug.xcconfig"; sourceTree = "<group>"; };
 		A2D989DBE4FA06A025E567E6 /* Pods_minha_biblioteca.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_minha_biblioteca.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
@@ -83,13 +83,13 @@
 				64052B4D2274D80600C89C79 /* Layouts */,
 				64052B4A2274D48A00C89C79 /* viewController */,
 				64052B472274A63500C89C79 /* models */,
-				64052B452274A0DE00C89C79 /* GoogleService-Info.plist */,
 				64052B3022749E7100C89C79 /* AppDelegate.swift */,
 				64052B3422749E7100C89C79 /* Main.storyboard */,
 				64052B3A22749E7200C89C79 /* Assets.xcassets */,
 				64052B3C22749E7200C89C79 /* LaunchScreen.storyboard */,
 				64052B3F22749E7200C89C79 /* Info.plist */,
 				64052B3722749E7100C89C79 /* minha_biblioteca.xcdatamodeld */,
+				64052B502275569400C89C79 /* GoogleService-Info.plist */,
 			);
 			path = "minha-biblioteca";
 			sourceTree = "<group>";
@@ -188,7 +188,7 @@
 			buildActionMask = 2147483647;
 			files = (
 				64052B3E22749E7200C89C79 /* LaunchScreen.storyboard in Resources */,
-				64052B462274A0DE00C89C79 /* GoogleService-Info.plist in Resources */,
+				64052B512275569400C89C79 /* GoogleService-Info.plist in Resources */,
 				64052B3B22749E7200C89C79 /* Assets.xcassets in Resources */,
 				64052B3622749E7100C89C79 /* Main.storyboard in Resources */,
 			);

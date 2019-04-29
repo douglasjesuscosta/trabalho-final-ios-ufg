@@ -60,11 +60,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let book = books[indexPath.row]
         
-       
-        cell.imageBook.sd_setImage(with: URL(string: book.imageUrl))
-        cell.titleBook.text = book.name
+        if(book.name != nil && book.imageUrl != nil) {
+            cell.titleBook.text = book.name
+        
+            if(!book.imageUrl.isEmpty){
+                cell.imageBook.sd_setImage(with: URL(string: book.imageUrl))
+                return cell
+            } else {
+                var image = UIImage(named: "book")!
+                cell.imageBook = UIImageView(image: image)
+            }
+        }
         
         return cell
     }
+
 }
 

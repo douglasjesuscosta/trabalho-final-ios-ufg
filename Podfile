@@ -9,5 +9,6 @@ target 'minha-biblioteca' do
   pod 'Firebase/Core'
   pod 'Firebase/Database'
   pod 'SDWebImage/WebP'
+  pod 'Firebase/Storage'
 
 end

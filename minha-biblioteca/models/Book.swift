@@ -21,8 +21,18 @@ class Book : NSObject, NSCoding {
     
     var itemRef: DatabaseReference?
     
-    init(key:String, name:String, author:String, classification:Int, bookDescription:String, value:Float, imageUrl:String) {
-        self.key = key
+    var dictionary: [String:Any] {
+        return ["name":name,
+                "author":author,
+                "classification":classification,
+                "bookDescription":bookDescription,
+                "value":value,
+                "imageUrl":imageUrl
+                ]
+    }
+    
+    init(name:String, author:String, classification:Int, bookDescription:String, value:Float, imageUrl:String) {
+        self.key = ""
         self.name = name
         self.author = author
         self.classification = classification
@@ -97,6 +107,10 @@ class Book : NSObject, NSCoding {
         } else{
             self.imageUrl = ""
         }
+    }
+    
+    var nsDictionary: NSDictionary {
+        return dictionary as NSDictionary
     }
     
 }

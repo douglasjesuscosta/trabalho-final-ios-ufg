@@ -140,42 +140,42 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Título do livro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5KU-3Y-TO8">
-                                <rect key="frame" x="72" y="112" width="231" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Título do livro" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="5KU-3Y-TO8">
+                                <rect key="frame" x="62.5" y="104" width="250" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="Nome do livro"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="250" id="3zY-xC-UE2"/>
+                                </constraints>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="3zY-xC-UE2"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="3zY-xC-UE2"/>
+                                    </mask>
+                                </variation>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Autor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hb-8Z-nY8">
-                                <rect key="frame" x="72" y="181" width="231" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Autor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="8hb-8Z-nY8">
+                                <rect key="frame" x="62.5" y="164" width="250" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="Nome do autor"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9MY-Ps-fEE">
-                                <rect key="frame" x="72" y="246" width="231" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Descrição" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="9MY-Ps-fEE">
+                                <rect key="frame" x="62.5" y="224" width="250" height="30"/>
                                 <accessibility key="accessibilityConfiguration" hint="Descrição do livro"/>
                                 <nil key="textColor"/>
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Classificação" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cyy-By-ymW">
-                                <rect key="frame" x="72" y="306" width="231" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <nil key="textColor"/>
-                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
-                            </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="nGA-6l-1Nw">
-                                <rect key="frame" x="67" y="364" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
                             <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDB-Ms-Cym">
-                                <rect key="frame" x="126" y="511" width="122" height="30"/>
+                                <rect key="frame" x="126" y="537" width="122" height="30"/>
                                 <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
                                 <state key="normal" title="Adicionar foto"/>
                                 <connections>
@@ -202,16 +202,75 @@
                                     <action selector="cancel:" destination="Axm-ed-XQT" eventType="touchUpInside" id="ML3-Bs-Ajj"/>
                                 </connections>
                             </button>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Classificação" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Cyy-By-ymW">
+                                <rect key="frame" x="62.5" y="284" width="250" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="12"/>
+                                <textInputTraits key="textInputTraits" keyboardType="numberPad"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Valor" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oq6-gu-BLM">
+                                <rect key="frame" x="62.5" y="344" width="250" height="30"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
+                            </textField>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="nGA-6l-1Nw">
+                                <rect key="frame" x="67" y="390" width="240" height="128"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <constraints>
+                            <constraint firstItem="oq6-gu-BLM" firstAttribute="width" secondItem="Cyy-By-ymW" secondAttribute="width" id="05p-Wv-nPd"/>
+                            <constraint firstItem="oq6-gu-BLM" firstAttribute="centerX" secondItem="Cyy-By-ymW" secondAttribute="centerX" id="1F9-8m-xNf"/>
+                            <constraint firstItem="9MY-Ps-fEE" firstAttribute="width" secondItem="8hb-8Z-nY8" secondAttribute="width" id="7LN-DK-dum"/>
+                            <constraint firstItem="5KU-3Y-TO8" firstAttribute="top" secondItem="FJn-MK-pg7" secondAttribute="top" constant="40" id="8bd-j1-ou1"/>
+                            <constraint firstItem="oq6-gu-BLM" firstAttribute="top" secondItem="Cyy-By-ymW" secondAttribute="bottom" constant="30" id="KEz-VA-ICF"/>
+                            <constraint firstItem="Cyy-By-ymW" firstAttribute="top" secondItem="9MY-Ps-fEE" secondAttribute="bottom" constant="30" id="OdT-66-a6p"/>
+                            <constraint firstItem="8hb-8Z-nY8" firstAttribute="centerX" secondItem="5KU-3Y-TO8" secondAttribute="centerX" id="RoL-LU-Z9L"/>
+                            <constraint firstItem="5KU-3Y-TO8" firstAttribute="centerX" secondItem="FJn-MK-pg7" secondAttribute="centerX" id="T8J-tC-wnK"/>
+                            <constraint firstItem="9MY-Ps-fEE" firstAttribute="top" secondItem="8hb-8Z-nY8" secondAttribute="bottom" constant="30" id="atv-Ya-7pD"/>
+                            <constraint firstItem="Cyy-By-ymW" firstAttribute="width" secondItem="9MY-Ps-fEE" secondAttribute="width" id="dPs-s1-TYA"/>
+                            <constraint firstItem="9MY-Ps-fEE" firstAttribute="centerX" secondItem="8hb-8Z-nY8" secondAttribute="centerX" id="hed-d6-qvl"/>
+                            <constraint firstItem="Cyy-By-ymW" firstAttribute="centerX" secondItem="9MY-Ps-fEE" secondAttribute="centerX" id="mvb-y6-mXG"/>
+                            <constraint firstItem="8hb-8Z-nY8" firstAttribute="width" secondItem="5KU-3Y-TO8" secondAttribute="width" id="ph7-yb-0ns"/>
+                            <constraint firstItem="8hb-8Z-nY8" firstAttribute="top" secondItem="5KU-3Y-TO8" secondAttribute="bottom" constant="30" id="rw3-oT-iGb"/>
+                        </constraints>
                         <viewLayoutGuide key="safeArea" id="FJn-MK-pg7"/>
+                        <variation key="default">
+                            <mask key="constraints">
+                                <exclude reference="RoL-LU-Z9L"/>
+                                <exclude reference="ph7-yb-0ns"/>
+                                <exclude reference="rw3-oT-iGb"/>
+                                <exclude reference="7LN-DK-dum"/>
+                                <exclude reference="atv-Ya-7pD"/>
+                                <exclude reference="hed-d6-qvl"/>
+                                <exclude reference="OdT-66-a6p"/>
+                                <exclude reference="dPs-s1-TYA"/>
+                                <exclude reference="mvb-y6-mXG"/>
+                            </mask>
+                        </variation>
+                        <variation key="heightClass=regular-widthClass=compact">
+                            <mask key="constraints">
+                                <include reference="RoL-LU-Z9L"/>
+                                <include reference="ph7-yb-0ns"/>
+                                <include reference="rw3-oT-iGb"/>
+                                <include reference="7LN-DK-dum"/>
+                                <include reference="atv-Ya-7pD"/>
+                                <include reference="hed-d6-qvl"/>
+                                <include reference="OdT-66-a6p"/>
+                                <include reference="dPs-s1-TYA"/>
+                                <include reference="mvb-y6-mXG"/>
+                            </mask>
+                        </variation>
                     </view>
                     <connections>
                         <outlet property="authorField" destination="8hb-8Z-nY8" id="yi6-WM-SBR"/>
-                        <outlet property="bookPhotoField" destination="nGA-6l-1Nw" id="51G-LH-QR2"/>
                         <outlet property="classificationField" destination="Cyy-By-ymW" id="UQE-dF-Bw8"/>
                         <outlet property="descriptionField" destination="9MY-Ps-fEE" id="KDX-qY-lUc"/>
+                        <outlet property="photoBookField" destination="nGA-6l-1Nw" id="UpM-bg-rgz"/>
                         <outlet property="titleBookField" destination="5KU-3Y-TO8" id="LS6-Tr-oOE"/>
+                        <outlet property="valueField" destination="oq6-gu-BLM" id="ei5-dy-tiD"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVu-6D-319" userLabel="First Responder" sceneMemberID="firstResponder"/>

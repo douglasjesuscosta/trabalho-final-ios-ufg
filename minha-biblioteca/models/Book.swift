@@ -22,7 +22,8 @@ class Book : NSObject, NSCoding {
     var itemRef: DatabaseReference?
     
     var dictionary: [String:Any] {
-        return ["name":name,
+        return ["key":key,
+                "name":name,
                 "author":author,
                 "classification":classification,
                 "bookDescription":bookDescription,
@@ -106,6 +107,12 @@ class Book : NSObject, NSCoding {
             self.imageUrl = imageUrl
         } else{
             self.imageUrl = ""
+        }
+        
+        if let key = snapshotValue?["key"] as? String {
+            self.key = key
+        } else{
+            self.key = ""
         }
     }
     

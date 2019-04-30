@@ -41,7 +41,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 newBooks.append(bookObject)
                 print(bookSnapshot)
             }
-            
             var indexPaths: [NSIndexPath] = []
             for i in 0..<self.bookCollectionView!.numberOfItems(inSection: 0) {
                 indexPaths.append(NSIndexPath(item: i, section: 0))
@@ -50,6 +49,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             self.books = newBooks
             self.bookCollectionView.reloadData()
             self.bookCollectionView.reloadItems(at: indexPaths as [IndexPath])
+            self.bookCollectionView.needsUpdateConstraints()
         }
     }
     

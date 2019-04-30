@@ -80,6 +80,11 @@ class ViewBookViewController: UIViewController {
     */
     
     @IBAction func deleteBook(_ sender: Any) {
+        let ref = self.dbRef.child(book.key)
+        
+        ref.removeValue { error, _ in
+            print(error ?? <#default value#>)
+        }
     }
     
 

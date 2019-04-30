@@ -82,6 +82,8 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
         let book:Book = Book(name: name, author: author, classification: classification!, bookDescription: description, value: value!, imageUrl: imageUrl)
         
         let key = dbRef.childByAutoId().key
+        book.key = key!
+        
         let childUpdates = ["/\(key)":book.nsDictionary]
         
         self.dbRef.updateChildValues(childUpdates)
@@ -92,6 +94,10 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
     @IBAction func cancel(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
+    
+    /*
+    * Metodo para realizar a persistencia do livro no Firebase.
+    */
     
     @IBAction func saveBook(_ sender: Any) {
     
@@ -116,12 +122,6 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
             
         }
     }
-    
-    
-    
-    /*
-     Função para realizar o upload da imagem no banco Firebase
-     */
     
     /*
      Metodo para gerar uma string randomica para nomeacao de imagens

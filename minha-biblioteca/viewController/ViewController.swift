@@ -53,6 +53,8 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
             self.books = newBooks
             self.bookCollectionView.reloadData()
             
+            OperationQueue.main.addOperation{self.bookCollectionView?.reloadData()}
+            
             /* Atualizacao da UICollectionView */
             var indexPaths: [NSIndexPath] = []
             for i in 0..<self.bookCollectionView!.numberOfItems(inSection: 0) {
@@ -101,9 +103,6 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         //self.present(viewControllerViewBook, animated: true, completion: nil)
         
         self.navigationController?.pushViewController(viewControllerViewBook, animated: true)
-
-        
     }
-
 }
 

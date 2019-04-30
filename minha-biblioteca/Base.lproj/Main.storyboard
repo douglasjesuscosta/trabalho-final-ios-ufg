@@ -174,26 +174,34 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits"/>
                             </textField>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDB-Ms-Cym">
-                                <rect key="frame" x="126" y="537" width="122" height="30"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="nGA-6l-1Nw">
+                                <rect key="frame" x="87.5" y="394" width="200" height="150"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="150" id="PEZ-mP-SEw"/>
+                                    <constraint firstAttribute="width" constant="200" id="nZc-0z-50u"/>
+                                </constraints>
+                                <variation key="default">
+                                    <mask key="constraints">
+                                        <exclude reference="PEZ-mP-SEw"/>
+                                        <exclude reference="nZc-0z-50u"/>
+                                    </mask>
+                                </variation>
+                                <variation key="heightClass=regular-widthClass=compact">
+                                    <mask key="constraints">
+                                        <include reference="PEZ-mP-SEw"/>
+                                        <include reference="nZc-0z-50u"/>
+                                    </mask>
+                                </variation>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="aDB-Ms-Cym">
+                                <rect key="frame" x="139.5" y="551" width="96" height="30"/>
                                 <state key="normal" title="Adicionar foto"/>
                                 <connections>
                                     <action selector="addBookPhoto:" destination="Axm-ed-XQT" eventType="touchUpInside" id="nlb-qh-c8Y"/>
                                 </connections>
                             </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cM6-j7-IWO">
-                                <rect key="frame" x="67" y="599" width="57" height="35"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
-                                <state key="normal" title="Salvar"/>
-                                <connections>
-                                    <action selector="saveBook:" destination="Axm-ed-XQT" eventType="touchUpInside" id="KxR-ld-Q8C"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f08-qY-rAP">
-                                <rect key="frame" x="224" y="604" width="85" height="36"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="f08-qY-rAP">
+                                <rect key="frame" x="217" y="611" width="98" height="36"/>
                                 <fontDescription key="fontDescription" type="boldSystem" pointSize="20"/>
                                 <state key="normal" title="Cancelar">
                                     <color key="titleColor" red="0.87285459844559588" green="0.36905105516267384" blue="0.25399759433478492" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
@@ -214,10 +222,14 @@
                                 <fontDescription key="fontDescription" type="system" pointSize="14"/>
                                 <textInputTraits key="textInputTraits" keyboardType="decimalPad"/>
                             </textField>
-                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="book" translatesAutoresizingMaskIntoConstraints="NO" id="nGA-6l-1Nw">
-                                <rect key="frame" x="67" y="390" width="240" height="128"/>
-                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
-                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="cM6-j7-IWO">
+                                <rect key="frame" x="60" y="611.5" width="57" height="35"/>
+                                <fontDescription key="fontDescription" type="boldSystem" pointSize="19"/>
+                                <state key="normal" title="Salvar"/>
+                                <connections>
+                                    <action selector="saveBook:" destination="Axm-ed-XQT" eventType="touchUpInside" id="2oH-FB-QnS"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
@@ -225,20 +237,32 @@
                             <constraint firstItem="oq6-gu-BLM" firstAttribute="centerX" secondItem="Cyy-By-ymW" secondAttribute="centerX" id="1F9-8m-xNf"/>
                             <constraint firstItem="9MY-Ps-fEE" firstAttribute="width" secondItem="8hb-8Z-nY8" secondAttribute="width" id="7LN-DK-dum"/>
                             <constraint firstItem="5KU-3Y-TO8" firstAttribute="top" secondItem="FJn-MK-pg7" secondAttribute="top" constant="40" id="8bd-j1-ou1"/>
+                            <constraint firstItem="f08-qY-rAP" firstAttribute="leading" secondItem="cM6-j7-IWO" secondAttribute="trailing" constant="100" id="Eyx-86-oRr"/>
+                            <constraint firstItem="cM6-j7-IWO" firstAttribute="leading" secondItem="FJn-MK-pg7" secondAttribute="leading" constant="60" id="FSz-AT-aWU"/>
                             <constraint firstItem="oq6-gu-BLM" firstAttribute="top" secondItem="Cyy-By-ymW" secondAttribute="bottom" constant="30" id="KEz-VA-ICF"/>
                             <constraint firstItem="Cyy-By-ymW" firstAttribute="top" secondItem="9MY-Ps-fEE" secondAttribute="bottom" constant="30" id="OdT-66-a6p"/>
+                            <constraint firstItem="f08-qY-rAP" firstAttribute="leading" secondItem="cM6-j7-IWO" secondAttribute="trailing" constant="100" id="PmX-Fd-5bk"/>
                             <constraint firstItem="8hb-8Z-nY8" firstAttribute="centerX" secondItem="5KU-3Y-TO8" secondAttribute="centerX" id="RoL-LU-Z9L"/>
+                            <constraint firstItem="nGA-6l-1Nw" firstAttribute="top" secondItem="oq6-gu-BLM" secondAttribute="bottom" constant="20" id="Seq-JH-wYY"/>
                             <constraint firstItem="5KU-3Y-TO8" firstAttribute="centerX" secondItem="FJn-MK-pg7" secondAttribute="centerX" id="T8J-tC-wnK"/>
+                            <constraint firstItem="nGA-6l-1Nw" firstAttribute="centerX" secondItem="oq6-gu-BLM" secondAttribute="centerX" id="ZGW-p8-OgR"/>
+                            <constraint firstItem="FJn-MK-pg7" firstAttribute="bottom" secondItem="f08-qY-rAP" secondAttribute="bottom" constant="20" id="ZdA-qC-omL"/>
                             <constraint firstItem="9MY-Ps-fEE" firstAttribute="top" secondItem="8hb-8Z-nY8" secondAttribute="bottom" constant="30" id="atv-Ya-7pD"/>
                             <constraint firstItem="Cyy-By-ymW" firstAttribute="width" secondItem="9MY-Ps-fEE" secondAttribute="width" id="dPs-s1-TYA"/>
                             <constraint firstItem="9MY-Ps-fEE" firstAttribute="centerX" secondItem="8hb-8Z-nY8" secondAttribute="centerX" id="hed-d6-qvl"/>
+                            <constraint firstItem="cM6-j7-IWO" firstAttribute="centerY" secondItem="f08-qY-rAP" secondAttribute="centerY" id="j2u-n7-a6q"/>
+                            <constraint firstItem="f08-qY-rAP" firstAttribute="top" secondItem="aDB-Ms-Cym" secondAttribute="bottom" constant="30" id="mW5-lP-TKE"/>
                             <constraint firstItem="Cyy-By-ymW" firstAttribute="centerX" secondItem="9MY-Ps-fEE" secondAttribute="centerX" id="mvb-y6-mXG"/>
+                            <constraint firstItem="FJn-MK-pg7" firstAttribute="trailing" secondItem="f08-qY-rAP" secondAttribute="trailing" constant="60" id="obj-m2-OmU"/>
+                            <constraint firstItem="aDB-Ms-Cym" firstAttribute="centerX" secondItem="nGA-6l-1Nw" secondAttribute="centerX" id="pHq-P7-HGa"/>
                             <constraint firstItem="8hb-8Z-nY8" firstAttribute="width" secondItem="5KU-3Y-TO8" secondAttribute="width" id="ph7-yb-0ns"/>
                             <constraint firstItem="8hb-8Z-nY8" firstAttribute="top" secondItem="5KU-3Y-TO8" secondAttribute="bottom" constant="30" id="rw3-oT-iGb"/>
+                            <constraint firstItem="f08-qY-rAP" firstAttribute="top" secondItem="aDB-Ms-Cym" secondAttribute="bottom" constant="30" id="ytw-rS-4Fv"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="FJn-MK-pg7"/>
                         <variation key="default">
                             <mask key="constraints">
+                                <exclude reference="obj-m2-OmU"/>
                                 <exclude reference="RoL-LU-Z9L"/>
                                 <exclude reference="ph7-yb-0ns"/>
                                 <exclude reference="rw3-oT-iGb"/>
@@ -248,10 +272,19 @@
                                 <exclude reference="OdT-66-a6p"/>
                                 <exclude reference="dPs-s1-TYA"/>
                                 <exclude reference="mvb-y6-mXG"/>
+                                <exclude reference="Seq-JH-wYY"/>
+                                <exclude reference="ZGW-p8-OgR"/>
+                                <exclude reference="pHq-P7-HGa"/>
+                                <exclude reference="FSz-AT-aWU"/>
+                                <exclude reference="j2u-n7-a6q"/>
+                                <exclude reference="Eyx-86-oRr"/>
+                                <exclude reference="PmX-Fd-5bk"/>
+                                <exclude reference="mW5-lP-TKE"/>
                             </mask>
                         </variation>
                         <variation key="heightClass=regular-widthClass=compact">
                             <mask key="constraints">
+                                <include reference="obj-m2-OmU"/>
                                 <include reference="RoL-LU-Z9L"/>
                                 <include reference="ph7-yb-0ns"/>
                                 <include reference="rw3-oT-iGb"/>
@@ -261,6 +294,14 @@
                                 <include reference="OdT-66-a6p"/>
                                 <include reference="dPs-s1-TYA"/>
                                 <include reference="mvb-y6-mXG"/>
+                                <include reference="Seq-JH-wYY"/>
+                                <include reference="ZGW-p8-OgR"/>
+                                <include reference="pHq-P7-HGa"/>
+                                <include reference="FSz-AT-aWU"/>
+                                <include reference="j2u-n7-a6q"/>
+                                <include reference="Eyx-86-oRr"/>
+                                <include reference="PmX-Fd-5bk"/>
+                                <include reference="mW5-lP-TKE"/>
                             </mask>
                         </variation>
                     </view>
@@ -276,6 +317,134 @@
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ZVu-6D-319" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
             <point key="canvasLocation" x="1269.5999999999999" y="128.18590704647679"/>
+        </scene>
+        <!--View Book View Controller-->
+        <scene sceneID="bIc-VQ-yjT">
+            <objects>
+                <viewController storyboardIdentifier="viewBook" id="A0M-Ne-rGk" customClass="ViewBookViewController" customModule="minha_biblioteca" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="54d-Xr-eZx">
+                        <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" translatesAutoresizingMaskIntoConstraints="NO" id="9Fv-Qw-3eB">
+                                <rect key="frame" x="0.0" y="37" width="375" height="249"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="n5H-bG-JFF">
+                                <rect key="frame" x="157" y="329" width="175" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Título do livro" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="V07-rk-1uy">
+                                <rect key="frame" x="28" y="334" width="104" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Autor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="A61-5e-fZ3">
+                                <rect key="frame" x="60" y="379" width="42" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Descrição" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CJX-dy-j61">
+                                <rect key="frame" x="43" y="423" width="77" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XSC-8G-2kl">
+                                <rect key="frame" x="157" y="379" width="175" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="dl9-jZ-ABG">
+                                <rect key="frame" x="157" y="423" width="175" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Valor" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="AMp-yn-925">
+                                <rect key="frame" x="59" y="468" width="39" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <textField opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="gmK-Jf-crW">
+                                <rect key="frame" x="157" y="468" width="175" height="30"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <nil key="textColor"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" text="Classificação" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="eCS-8A-ZKq">
+                                <rect key="frame" x="30" y="520" width="101" height="21"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <nil key="textColor"/>
+                                <nil key="highlightedColor"/>
+                            </label>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StarOff" highlightedImage="StarOn" translatesAutoresizingMaskIntoConstraints="NO" id="lYI-UI-2yy">
+                                <rect key="frame" x="157" y="514" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StarOff" highlightedImage="StarOn" translatesAutoresizingMaskIntoConstraints="NO" id="LXi-iQ-hvj">
+                                <rect key="frame" x="284" y="514" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StarOff" highlightedImage="StarOn" translatesAutoresizingMaskIntoConstraints="NO" id="WnN-X5-uVL">
+                                <rect key="frame" x="190" y="514" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StarOff" highlightedImage="StarOn" translatesAutoresizingMaskIntoConstraints="NO" id="8Wi-8N-Uib">
+                                <rect key="frame" x="221" y="514" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" fixedFrame="YES" image="StarOff" highlightedImage="StarOn" translatesAutoresizingMaskIntoConstraints="NO" id="QbW-WD-7I7">
+                                <rect key="frame" x="252" y="514" width="30" height="33"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" fixedFrame="YES" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="pe2-Ef-2da">
+                                <rect key="frame" x="123" y="600" width="128" height="47"/>
+                                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                <color key="backgroundColor" red="0.87285459840000001" green="0.36905105519999998" blue="0.25399759430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <state key="normal" title="Deletar">
+                                    <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                                    <color key="titleShadowColor" red="0.87285459840000001" green="0.36905105519999998" blue="0.25399759430000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="deleteBook:" destination="A0M-Ne-rGk" eventType="touchUpInside" id="mpp-0a-Mxd"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <color key="backgroundColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <viewLayoutGuide key="safeArea" id="Gi2-vW-0xv"/>
+                    </view>
+                    <connections>
+                        <outlet property="bookAuthor" destination="XSC-8G-2kl" id="d1u-mQ-n9l"/>
+                        <outlet property="bookDescription" destination="dl9-jZ-ABG" id="42S-Bf-Ymg"/>
+                        <outlet property="bookImage" destination="9Fv-Qw-3eB" id="0SN-jE-z17"/>
+                        <outlet property="bookTitle" destination="n5H-bG-JFF" id="f5F-L0-SED"/>
+                        <outlet property="bookValue" destination="gmK-Jf-crW" id="zwC-xP-sMF"/>
+                        <outlet property="star1" destination="lYI-UI-2yy" id="e2j-nZ-d1D"/>
+                        <outlet property="star2" destination="WnN-X5-uVL" id="P35-p9-vSF"/>
+                        <outlet property="star3" destination="8Wi-8N-Uib" id="xeP-t3-KpD"/>
+                        <outlet property="star4" destination="QbW-WD-7I7" id="UR0-jv-mk5"/>
+                        <outlet property="star5" destination="LXi-iQ-hvj" id="iVG-mt-M8c"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="cXq-t4-axe" userLabel="First Responder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="241" y="981"/>
         </scene>
         <!--Navigation Controller-->
         <scene sceneID="cZI-MZ-CXD">
@@ -297,6 +466,8 @@
         </scene>
     </scenes>
     <resources>
+        <image name="StarOff" width="195" height="188"/>
+        <image name="StarOn" width="66" height="66"/>
         <image name="book" width="50" height="50"/>
     </resources>
 </document>

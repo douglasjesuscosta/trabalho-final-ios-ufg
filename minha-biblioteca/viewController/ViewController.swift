@@ -31,11 +31,7 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         loadDB()
     }
-    
-    func loadBooks() {
-        
-    }
-    
+
     func loadDB() {
         dbRef.observe(DataEventType.value) { (DataSnapshot) in
             var newBooks = [Book]()
@@ -46,8 +42,14 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 print(bookSnapshot)
             }
             
+            var indexPaths: [NSIndexPath] = []
+            for i in 0..<self.bookCollectionView!.numberOfItems(inSection: 0) {
+                indexPaths.append(NSIndexPath(item: i, section: 0))
+            }
+            
             self.books = newBooks
             self.bookCollectionView.reloadData()
+            self.bookCollectionView.reloadItems(at: indexPaths as [IndexPath])
         }
     }
     
@@ -60,9 +62,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         let book = books[indexPath.row]
         
-        if(book.name != nil && book.imageUrl != nil) {
+        if cell.titleBook != nil {
             cell.titleBook.text = book.name
-        
+            
             if(!book.imageUrl.isEmpty){
                 cell.imageBook.sd_setImage(with: URL(string: book.imageUrl))
                 return cell
@@ -73,6 +75,20 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         }
         
         return cell
+    }
+    
+    func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        
+        let viewControllerViewBook = self.storyboard?.instantiateViewController(withIdentifier: "viewBook") as! ViewBookViewController
+        
+        viewControllerViewBook.book = books[indexPath.row]
+        
+        viewControllerViewBook.modalTransitionStyle = .flipHorizontal
+        //self.present(viewControllerViewBook, animated: true, completion: nil)
+        
+        self.navigationController?.pushViewController(viewControllerViewBook, animated: true)
+
+        
     }
 
 }

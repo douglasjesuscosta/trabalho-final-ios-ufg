@@ -71,10 +71,7 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
     /*
      Metodo acionado a partir do botao "Salvar" inicializando o fluxo de persistencia de um livro
     */
-    @IBAction func saveBook(_ sender: Any) {
-    
-        let urlImage:String = uploadImage()
-        print(urlImage)
+    func persistBook(imageUrl: String) {
     
         let name = titleBookField.text as! String
         let author = authorField.text as! String
@@ -82,47 +79,49 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
         let classification = Int(classificationField.text!)
         let value = Float(valueField.text!)
         
-        let book:Book = Book(name: name, author: author, classification: classification!, bookDescription: description, value: value!, imageUrl: urlImage)
-        
-        print(book)
+        let book:Book = Book(name: name, author: author, classification: classification!, bookDescription: description, value: value!, imageUrl: imageUrl)
         
         let key = dbRef.childByAutoId().key
         let childUpdates = ["/\(key)":book.nsDictionary]
         
         self.dbRef.updateChildValues(childUpdates)
-
+        
+        self.navigationController?.popViewController(animated: true)
     }
     
     @IBAction func cancel(_ sender: Any) {
-        self.dismiss(animated: true, completion: nil)
+        self.navigationController?.popViewController(animated: true)
     }
+    
+    @IBAction func saveBook(_ sender: Any) {
+    
+        if (photoBookField.image != nil) {
+            
+            if let imageData = photoBookField.image?.jpegData(compressionQuality: 0.3) {
+                let imageId = randomString(length: 10)
+                let storageRef = Storage.storage().reference().child("images/" + imageId)
+                
+                let metaData = StorageMetadata()
+                metaData.contentType = "image/jpeg"
+                
+                storageRef.putData(imageData, metadata: metaData) { (metadata, error) in
+                        if(error == nil) {
+                            storageRef.downloadURL(completion: {(url, error) in
+                            let imageUrl = url!.absoluteString
+                            self.persistBook(imageUrl: imageUrl)
+                        }
+                    )}
+                 }
+            }
+            
+        }
+    }
+    
+    
     
     /*
      Função para realizar o upload da imagem no banco Firebase
      */
-    func uploadImage() -> String {
-        
-        var urlImage:String = ""
-        
-        if (photoBookField.image != nil) {
-            let imageId = randomString(length: 10)
-            let storageRef = Storage.storage().reference().child("images/" + imageId)
-            let imageData = photoBookField.image?.pngData()
-            let metaData = StorageMetadata()
-            
-            metaData.contentType = "image/png"
-            
-            storageRef.putData(imageData!, metadata: metaData) { (metadata, error) in
-                if(error == nil) {
-                    storageRef.downloadURL(completion: {(url, error) in
-                        urlImage = url!.absoluteString
-                    })
-                }
-            }
-        }
-
-        return urlImage
-    }
     
     /*
      Metodo para gerar uma string randomica para nomeacao de imagens

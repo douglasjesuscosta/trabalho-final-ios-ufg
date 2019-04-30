@@ -10,11 +10,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "minha-biblioteca/viewController/ViewController.swift"
-            timestampString = "578281274.693936"
+            timestampString = "578284531.127617"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "37"
-            endingLineNumber = "37"
+            startingLineNumber = "46"
+            endingLineNumber = "46"
             landmarkName = "loadDB()"
             landmarkType = "7">
          </BreakpointContent>
@@ -26,11 +26,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "minha-biblioteca/viewController/ViewController.swift"
-            timestampString = "578281274.694039"
+            timestampString = "578284531.1277601"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "42"
-            endingLineNumber = "42"
+            startingLineNumber = "51"
+            endingLineNumber = "51"
             landmarkName = "loadDB()"
             landmarkType = "7">
          </BreakpointContent>
@@ -42,11 +42,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "minha-biblioteca/viewController/ViewController.swift"
-            timestampString = "578281274.69412"
+            timestampString = "578284531.127863"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
+            startingLineNumber = "75"
+            endingLineNumber = "75"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -58,11 +58,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "minha-biblioteca/viewController/AddBookViewController.swift"
-            timestampString = "578281274.6942559"
+            timestampString = "578284531.127972"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
             landmarkName = "saveBook(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -74,11 +74,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "minha-biblioteca/viewController/AddBookViewController.swift"
-            timestampString = "578281274.694319"
+            timestampString = "578284531.128046"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "102"
-            endingLineNumber = "102"
+            startingLineNumber = "109"
+            endingLineNumber = "109"
             landmarkName = "saveBook(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -90,11 +90,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "minha-biblioteca/viewController/AddBookViewController.swift"
-            timestampString = "578281274.694378"
+            timestampString = "578284531.128126"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "103"
-            endingLineNumber = "103"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "saveBook(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -106,11 +106,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "minha-biblioteca/viewController/AddBookViewController.swift"
-            timestampString = "578281274.6944391"
+            timestampString = "578284531.12818"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "104"
-            endingLineNumber = "104"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "saveBook(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -122,11 +122,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "minha-biblioteca/viewController/ViewController.swift"
-            timestampString = "578281274.6945"
+            timestampString = "578284531.128258"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "65"
-            endingLineNumber = "65"
+            startingLineNumber = "79"
+            endingLineNumber = "79"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -138,11 +138,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "minha-biblioteca/viewController/ViewController.swift"
-            timestampString = "578281274.694567"
+            timestampString = "578284531.12834"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "63"
-            endingLineNumber = "63"
+            startingLineNumber = "77"
+            endingLineNumber = "77"
             landmarkName = "collectionView(_:cellForItemAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -154,13 +154,61 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "minha-biblioteca/viewController/ViewBookViewController.swift"
-            timestampString = "578281274.6946239"
+            timestampString = "578284531.128453"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "84"
-            endingLineNumber = "84"
+            startingLineNumber = "80"
+            endingLineNumber = "80"
             landmarkName = "deleteBook(_:)"
             landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "minha-biblioteca/viewController/ViewBookViewController.swift"
+            timestampString = "578284549.668396"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "82"
+            endingLineNumber = "82"
+            landmarkName = "deleteBook(_:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "minha_biblioteca.ViewBookViewController.deleteBook(Any) -&gt; ()"
+                  moduleName = "minha-biblioteca"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/douglasdejesuscosta/ios-projects/trabalho-final-ios-ufg/minha-biblioteca/viewController/ViewBookViewController.swift"
+                  timestampString = "578284549.684584"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "82"
+                  endingLineNumber = "82"
+                  offsetFromSymbolStart = "583">
+               </Location>
+               <Location
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;Swift.Error&gt;, __C.FIRDatabaseReference) -&gt; () in minha_biblioteca.ViewBookViewController.deleteBook(Any) -&gt; ()"
+                  moduleName = "minha-biblioteca"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/douglasdejesuscosta/ios-projects/trabalho-final-ios-ufg/minha-biblioteca/viewController/ViewBookViewController.swift"
+                  timestampString = "578284549.686718"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "83"
+                  endingLineNumber = "83"
+                  offsetFromSymbolStart = "57">
+               </Location>
+            </Locations>
          </BreakpointContent>
       </BreakpointProxy>
    </Breakpoints>

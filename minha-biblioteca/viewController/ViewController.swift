@@ -2,8 +2,8 @@
 //  ViewController.swift
 //  minha-biblioteca
 //
-//  Created by Douglas de Jesus Costa on 27/04/19.
-//  Copyright © 2019 Douglas de Jesus Costa. All rights reserved.
+//  Created by Douglas de Jesus Costa and Lucas de Castro Ribeiro on 27/04/19.
+//  Copyright © 2019 Douglas de Jesus Costa and Lucas de Castro Ribeiro. All rights reserved.
 //
 
 import UIKit
@@ -31,7 +31,16 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         
         loadDB()
     }
+    
+    override func viewDidAppear(_ animated: Bool) {
+        self.bookCollectionView.reloadData()
+    }
 
+    /*
+     Metodo responsavel por carregar os dados para a visualizacao.
+     E feito o carregamento dos dados de livros armazenados no
+     Firebase
+    */
     func loadDB() {
         dbRef.observe(DataEventType.value) { (DataSnapshot) in
             var newBooks = [Book]()
@@ -41,15 +50,17 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
                 newBooks.append(bookObject)
                 print(bookSnapshot)
             }
+            self.books = newBooks
+            self.bookCollectionView.reloadData()
+            
+            /* Atualizacao da UICollectionView */
             var indexPaths: [NSIndexPath] = []
             for i in 0..<self.bookCollectionView!.numberOfItems(inSection: 0) {
                 indexPaths.append(NSIndexPath(item: i, section: 0))
             }
             
-            self.books = newBooks
-            self.bookCollectionView.reloadData()
             self.bookCollectionView.reloadItems(at: indexPaths as [IndexPath])
-            self.bookCollectionView.needsUpdateConstraints()
+            //self.bookCollectionView.needsUpdateConstraints()
         }
     }
     
@@ -57,6 +68,9 @@ class ViewController: UIViewController, UICollectionViewDataSource, UICollection
         return books.count
     }
     
+    /*
+     Metodo que monta as celulas contendo dados dos livros.
+    */
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = bookCollectionView.dequeueReusableCell(withReuseIdentifier: "bookCell", for: indexPath) as! BookCollectionViewCell
         

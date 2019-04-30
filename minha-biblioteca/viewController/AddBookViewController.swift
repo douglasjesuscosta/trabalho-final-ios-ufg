@@ -2,8 +2,8 @@
 //  AddBookViewController.swift
 //  minha-biblioteca
 //
-//  Created by Douglas de Jesus Costa on 28/04/19.
-//  Copyright © 2019 Douglas de Jesus Costa. All rights reserved.
+//  Created by Douglas de Jesus Costa and Lucas de Castro Ribeiro on 28/04/19.
+//  Copyright © 2019 Douglas de Jesus Costa and Lucas de Castro Ribeiro. All rights reserved.
 //
 
 import UIKit
@@ -91,6 +91,10 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
         self.navigationController?.popViewController(animated: true)
     }
     
+    /*
+     Metodo acionado ao clicar no botao "Cancel"
+     Cancela o fluxo atual voltando ao anterior
+    */
     @IBAction func cancel(_ sender: Any) {
         self.navigationController?.popViewController(animated: true)
     }
@@ -98,7 +102,6 @@ class AddBookViewController: UIViewController, UIImagePickerControllerDelegate, 
     /*
     * Metodo para realizar a persistencia do livro no Firebase.
     */
-    
     @IBAction func saveBook(_ sender: Any) {
     
         if (photoBookField.image != nil) {

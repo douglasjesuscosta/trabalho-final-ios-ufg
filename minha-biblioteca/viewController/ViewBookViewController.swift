@@ -2,8 +2,8 @@
 //  ViewBookViewController.swift
 //  minha-biblioteca
 //
-//  Created by Douglas de Jesus Costa on 29/04/19.
-//  Copyright © 2019 Douglas de Jesus Costa. All rights reserved.
+//  Created by Douglas de Jesus Costa and Lucas de Castro Ribeiro on 29/04/19.
+//  Copyright © 2019 Douglas de Jesus Costa and Lucas de Castro Ribeiro. All rights reserved.
 //
 
 import UIKit
@@ -35,6 +35,10 @@ class ViewBookViewController: UIViewController {
         // Do any additional setup after loading the view.
     }
     
+    /*
+     Metodo que carrega os dados do livro nos campos
+     Tambem e feita a logica de visualizacao da classificacao
+    */
     func loadBookValues(){
         if(book != nil){
             bookImage.sd_setImage(with: URL(string: book.imageUrl))
@@ -68,24 +72,15 @@ class ViewBookViewController: UIViewController {
         }
     }
     
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
-    }
-    */
     
+    /*
+     Metodo responsavel pela remocao de um livro no Firebase
+    */
     @IBAction func deleteBook(_ sender: Any) {
-        let ref = self.dbRef.child(book.key)
+        let reference = self.dbRef.child(book.key)
         
-        ref.removeValue { error, _ in
-            print(error ?? <#default value#>)
+        reference.removeValue { error, _ in
+            print(error?.localizedDescription)
         }
     }
-    
-
 }
